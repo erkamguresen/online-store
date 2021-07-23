@@ -3,11 +3,11 @@ import ReactDOM from "react-dom";
 import App from "./components/root/App";
 import reportWebVitals from "./reportWebVitals";
 
-import "../node_modules/font-awesome/css/font-awesome.min.css";
+import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 import "../node_modules/reactstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "../node_modules/alertifyjs/build/css/alertify.min.css";
-import "../node_modules/alertifyjs/build/alertify.min";
+import "//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css";
+import "//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js";
 
 import { Provider } from "react-redux";
 import configureStore from "./redux/reducers/configureStore";
