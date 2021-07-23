@@ -6,8 +6,8 @@ import reportWebVitals from "./reportWebVitals";
 import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 import "../node_modules/reactstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import "https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css";
-import "https://cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js";
+import "./scripts/css/alertify.min.css";
+import "./scripts/alertify.min.js";
 
 import { Provider } from "react-redux";
 import configureStore from "./redux/reducers/configureStore";
