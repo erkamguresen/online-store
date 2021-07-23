@@ -45,10 +45,10 @@ export function getProducts(categoryId) {
   return function (dispatch) {
     let url =
       "https://webhooks.mongodb-realm.com/api/client/v2.0/app/online-shop-bwkwe/service/online-shop-products/incoming_webhook/webhook-get-products";
-    if (categoryId) {
-      url += "?categoryId=" + categoryId;
-    }
-
+    // if (categoryId) {
+    //   url += "?categoryId=" + categoryId;
+    // }
+    console.log(url);
     return fetch(url)
       .then((response) => {
         let result = response.json();
@@ -56,7 +56,14 @@ export function getProducts(categoryId) {
         return result;
       })
       .then((result) => {
-        const formattedData = parseBJSON(result);
+        let formattedData = parseBJSON(result);
+
+        if (categoryId) {
+          formattedData = formattedData.filter(
+            (product) => product.categoryId === categoryId
+          );
+        }
+
         return dispatch(getProductSuccess(formattedData));
       });
   };
