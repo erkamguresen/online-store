@@ -23,7 +23,7 @@ function App() {
             component={AddOrUpdateProduct}
           ></Route>
           <Route path="/saveproduct/" component={AddOrUpdateProduct}></Route>
-          <Route path="/online-store/" exact component={Dashboard}></Route>
+          {/* <Route path="/online-store/" exact component={Dashboard}></Route>
           <Route
             path="/online-store/products"
             exact
@@ -37,7 +37,7 @@ function App() {
           <Route
             path="/online-store/saveproduct/"
             component={AddOrUpdateProduct}
-          ></Route>
+          ></Route> */}
           <Route exact component={NotFound}></Route>
         </Switch>
       </Row>
