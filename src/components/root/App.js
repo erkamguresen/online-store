@@ -23,6 +23,21 @@ function App() {
             component={AddOrUpdateProduct}
           ></Route>
           <Route path="/saveproduct/" component={AddOrUpdateProduct}></Route>
+          <Route path="/online-store/" exact component={Dashboard}></Route>
+          <Route
+            path="/online-store/products"
+            exact
+            component={Dashboard}
+          ></Route>
+          <Route path="/online-store/cart" exact component={CartDetail}></Route>
+          <Route
+            path="/online-store/saveproduct/:productId"
+            component={AddOrUpdateProduct}
+          ></Route>
+          <Route
+            path="/online-store/saveproduct/"
+            component={AddOrUpdateProduct}
+          ></Route>
           <Route exact component={NotFound}></Route>
         </Switch>
       </Row>
