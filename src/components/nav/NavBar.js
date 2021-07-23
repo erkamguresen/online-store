@@ -20,7 +20,7 @@ const NavBar = (props) => {
     <div>
       <Navbar color="light" light expand="md">
         <NavbarBrand>
-          <Link to="/online-shop/">My Web Shop</Link>
+          <Link to="/online-store/">Web Shop</Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className="justify-content-end">

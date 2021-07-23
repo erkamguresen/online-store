@@ -16,6 +16,7 @@ function App() {
       <Row className="border border-warning border-1 m-1">
         <Switch>
           <Route path="/" exact component={Dashboard}></Route>
+          <Route path="/online-store/" exact component={Dashboard}></Route>
           <Route path="/products" exact component={Dashboard}></Route>
           <Route path="/cart" exact component={CartDetail}></Route>
           <Route
