@@ -21,13 +21,10 @@ export function getProducts(categoryId) {
     }
     return fetch(url)
       .then((response) => {
-        let data = response.json();
-        console.log(data);
-        return data;
+        response.json();
       })
       .then((result) => {
-        console.log(result);
-        return dispatch(getProductSuccess(result));
+        dispatch(getProductSuccess(result));
       });
   };
 }
