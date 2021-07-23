@@ -9,11 +9,11 @@ import NotFound from "../common/NotFound";
 
 function App() {
   return (
-    <Container className="border border-primary border-2 p-2">
-      <Row className="border border-danger border-1 m-1">
+    <Container className="p-2">
+      <Row className="m-1">
         <NavBar></NavBar>
       </Row>
-      <Row className="border border-warning border-1 m-1">
+      <Row className="m-1">
         <Switch>
           <Route path="/" exact component={Dashboard}></Route>
           <Route path="/products" exact component={Dashboard}></Route>
