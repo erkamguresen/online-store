@@ -11,7 +11,9 @@ class Dashboard extends Component {
           <Col xs="3">
             <CategoryList></CategoryList>
           </Col>
-          <Col xs="9">{/* <ProductList></ProductList> */}</Col>
+          <Col xs="9">
+            <ProductList></ProductList>
+          </Col>
         </Row>
       </Container>
     );

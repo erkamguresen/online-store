@@ -20,7 +20,11 @@ export function getProducts(categoryId) {
       url += "?categoryId=" + categoryId;
     }
     return fetch(url)
-      .then((response) => response.json())
+      .then((response) => {
+        let data = response.json();
+        console.log(data);
+        return data;
+      })
       .then((result) => dispatch(getProductSuccess(result)));
   };
 }
