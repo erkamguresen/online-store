@@ -25,7 +25,10 @@ export function getProducts(categoryId) {
         console.log(data);
         return data;
       })
-      .then((result) => dispatch(getProductSuccess(result)));
+      .then((result) => {
+        console.log(result);
+        return dispatch(getProductSuccess(result));
+      });
   };
 }
 
