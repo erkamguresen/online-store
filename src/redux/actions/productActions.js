@@ -44,8 +44,6 @@ export function saveProduct(product) {
 export function getProducts(categoryId) {
   return function (dispatch) {
     let url =
-      // "http://localhost:3000/products";
-
       "https://webhooks.mongodb-realm.com/api/client/v2.0/app/online-shop-bwkwe/service/online-shop-products/incoming_webhook/webhook-get-products";
     if (categoryId) {
       url += "?categoryId=" + categoryId;
@@ -60,7 +58,6 @@ export function getProducts(categoryId) {
       .then((result) => {
         const formattedData = parseBJSON(result);
         return dispatch(getProductSuccess(formattedData));
-        // return dispatch(getProductSuccess(result));
       });
   };
 }

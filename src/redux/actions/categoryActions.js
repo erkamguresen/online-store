@@ -16,9 +16,8 @@ export function getCategories() {
     return fetch(url)
       .then((response) => response.json())
       .then((result) => {
-        // const formattedData = parseBJSON(result);
-        // return dispatch(getCategoriesSuccess(formattedData));
-        return dispatch(getCategoriesSuccess(result));
+        const formattedData = parseBJSON(result);
+        return dispatch(getCategoriesSuccess(formattedData));
       });
   };
 }
