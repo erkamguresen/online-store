@@ -50,11 +50,11 @@ export function getProducts(categoryId) {
     if (categoryId) {
       url += "?categoryId=" + categoryId;
     }
-    console.log(url);
+
     return fetch(url)
       .then((response) => {
         let result = response.json();
-        console.log(result);
+
         return result;
       })
       .then((result) => {

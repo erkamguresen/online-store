@@ -19,7 +19,7 @@ class ProductList extends Component {
 
   render() {
     return (
-      <Container className="border border-1 border-success m-1 ">
+      <Container className="m-1 ">
         <h3>
           <Badge color="warning" className="badge bg-warning text-dark me-3">
             Products
