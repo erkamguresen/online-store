@@ -12,34 +12,6 @@ export function updateProductSuccess(prodcut) {
   return { type: actionTypes.UPDATE_PRODUCT_SUCCESS, payload: prodcut };
 }
 
-export function saveProductApi(product) {
-  return fetch(
-    "https://webhooks.mongodb-realm.com/api/client/v2.0/app/online-shop-bwkwe/service/online-shop-products/incoming_webhook/webhook-get-products" +
-      (product.id || ""),
-    {
-      method: product.id ? "PUT" : "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(product),
-    }
-  )
-    .then(handleResponse)
-    .catch(handleError);
-}
-
-export function saveProduct(product) {
-  return function (dispatch) {
-    return saveProductApi(product)
-      .then((savedProduct) => {
-        product.id
-          ? dispatch(updateProductSuccess(savedProduct))
-          : dispatch(createProductSuccess(savedProduct));
-      })
-      .catch((error) => {
-        throw error;
-      });
-  };
-}
-
 export function getProducts(categoryId) {
   return function (dispatch) {
     let url =

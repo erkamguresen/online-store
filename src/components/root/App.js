@@ -4,7 +4,7 @@ import NavBar from "../nav/NavBar";
 import Dashboard from "../root/Dashboard";
 import { Route, Switch } from "react-router-dom";
 import CartDetail from "../cart/CartDetail";
-import AddOrUpdateProduct from "../products/AddOrUpdateProduct";
+// import AddOrUpdateProduct from "../products/AddOrUpdateProduct";
 import NotFound from "../common/NotFound";
 
 function App() {
