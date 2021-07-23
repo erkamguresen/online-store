@@ -23,8 +23,8 @@ function App() {
             component={AddOrUpdateProduct}
           ></Route> */}
           {/* <Route path="/saveproduct/" component={AddOrUpdateProduct}></Route> */}
-          {/* <Route path="/online-store/" exact component={Dashboard}></Route>
-          <Route
+          <Route path="/online-store/" exact component={Dashboard}></Route>
+          {/* <Route
             path="/online-store/products"
             exact
             component={Dashboard}
