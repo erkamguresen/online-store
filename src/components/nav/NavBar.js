@@ -20,14 +20,14 @@ const NavBar = (props) => {
     <div>
       <Navbar color="light" light expand="md">
         <NavbarBrand>
-          <Link to="/online-store/">My Web Shop</Link>
+          <Link to="/">My Web Shop</Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar className="justify-content-end">
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink>
-                {/* <Link to="/saveproduct/">Add Product</Link> */}
+                <Link to="/saveproduct/">Add Product</Link>
               </NavLink>
             </NavItem>
 

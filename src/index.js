@@ -7,7 +7,7 @@ import "../node_modules/font-awesome/css/font-awesome.min.css";
 import "../node_modules/reactstrap";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/alertifyjs/build/css/alertify.min.css";
-import "../node_modules/alertifyjs/build/alertify.min.js";
+import "../node_modules/alertifyjs/build/alertify.min";
 
 import { Provider } from "react-redux";
 import configureStore from "./redux/reducers/configureStore";
