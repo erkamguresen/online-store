@@ -18,11 +18,11 @@ function App() {
           <Route path="/" exact component={Dashboard}></Route>
           <Route path="/products" exact component={Dashboard}></Route>
           <Route path="/cart" exact component={CartDetail}></Route>
-          <Route
+          {/* <Route
             path="/saveproduct/:productId"
             component={AddOrUpdateProduct}
-          ></Route>
-          <Route path="/saveproduct/" component={AddOrUpdateProduct}></Route>
+          ></Route> */}
+          {/* <Route path="/saveproduct/" component={AddOrUpdateProduct}></Route> */}
           {/* <Route path="/online-store/" exact component={Dashboard}></Route>
           <Route
             path="/online-store/products"

@@ -13,11 +13,15 @@ export function updateProductSuccess(prodcut) {
 }
 
 export function saveProductApi(product) {
-  return fetch("http://localhost:3000/products/" + (product.id || ""), {
-    method: product.id ? "PUT" : "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(product),
-  })
+  return fetch(
+    "https://webhooks.mongodb-realm.com/api/client/v2.0/app/online-shop-bwkwe/service/online-shop-products/incoming_webhook/webhook-get-products" +
+      (product.id || ""),
+    {
+      method: product.id ? "PUT" : "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(product),
+    }
+  )
     .then(handleResponse)
     .catch(handleError);
 }
