@@ -18,7 +18,7 @@ class CategoryList extends Component {
 
   render() {
     return (
-      <div className="border border-1 border-info m-1">
+      <div className="m-1">
         <h3>
           <Badge className="badge bg-warning text-dark">Categories</Badge>
         </h3>
