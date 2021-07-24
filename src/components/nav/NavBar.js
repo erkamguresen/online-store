@@ -27,7 +27,7 @@ const NavBar = (props) => {
           <Nav className="mr-auto" navbar>
             <NavItem>
               <NavLink>
-                {/* <Link to="/saveproduct/">Add Product</Link> */}
+                <Link to="/saveproduct/">Add Product</Link>
               </NavLink>
             </NavItem>
 
