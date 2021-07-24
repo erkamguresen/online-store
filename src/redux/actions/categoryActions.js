@@ -1,5 +1,5 @@
 import * as actionTypes from "./actionTypes";
-import parseBJSON from "../../logic/parseBJSON.js";
+// import parseBJSON from "../../logic/parseBJSON.js";
 
 export function changeCategory(category) {
   return { type: actionTypes.CHANGE_CATEGORY, payload: category };
@@ -16,8 +16,10 @@ export function getCategories() {
     return fetch(url)
       .then((response) => response.json())
       .then((result) => {
-        const formattedData = parseBJSON(result);
-        return dispatch(getCategoriesSuccess(formattedData));
+        // const formattedData = parseBJSON(result);
+        // return dispatch(getCategoriesSuccess(formattedData));
+        result.sort((a, b) => a.id - b.id);
+        return dispatch(getCategoriesSuccess(result));
       });
   };
 }

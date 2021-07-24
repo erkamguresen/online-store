@@ -1,5 +1,5 @@
 import * as actionTypes from "./actionTypes";
-import parseBJSON from "../../logic/parseBJSON.js";
+// import parseBJSON from "../../logic/parseBJSON.js";
 
 export function getProductSuccess(products) {
   return { type: actionTypes.GET_PRODUCTS_SUCCESS, payload: products };
@@ -45,9 +45,9 @@ export function getProducts(categoryId) {
   return function (dispatch) {
     let url =
       "https://webhooks.mongodb-realm.com/api/client/v2.0/app/online-shop-bwkwe/service/online-shop-products/incoming_webhook/webhook-get-products";
-    // if (categoryId) {
-    //   url += "?categoryId=" + categoryId;
-    // }
+    if (categoryId) {
+      url += "?categoryId=" + categoryId;
+    }
     console.log(url);
     return fetch(url)
       .then((response) => {
@@ -56,15 +56,19 @@ export function getProducts(categoryId) {
         return result;
       })
       .then((result) => {
-        let formattedData = parseBJSON(result);
+        // let formattedData = parseBJSON(result);
 
-        if (categoryId) {
-          formattedData = formattedData.filter(
-            (product) => product.categoryId === categoryId
-          );
-        }
+        // if (categoryId) {
+        //   formattedData = formattedData.filter(
+        //     (product) => product.categoryId === categoryId
+        //   );
+        // }
 
-        return dispatch(getProductSuccess(formattedData));
+        // return dispatch(getProductSuccess(formattedData));
+
+        result.sort((a, b) => a.id - b.id);
+
+        return dispatch(getProductSuccess(result));
       });
   };
 }
