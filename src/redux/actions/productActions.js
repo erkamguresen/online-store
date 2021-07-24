@@ -3,7 +3,8 @@ import * as actionTypes from "./actionTypes";
 
 const postDBHookUrl =
   "https://webhooks.mongodb-realm.com/api/client/v2.0/app/online-shop-bwkwe/service/online-shop-products/incoming_webhook/insert-product";
-const updateDBHookUrl = "";
+const updateDBHookUrl =
+  "https://webhooks.mongodb-realm.com/api/client/v2.0/app/online-shop-bwkwe/service/online-shop-products/incoming_webhook/webhook-update-product";
 
 export function getProductSuccess(products) {
   return { type: actionTypes.GET_PRODUCTS_SUCCESS, payload: products };
@@ -54,7 +55,7 @@ export function saveProduct(product) {
         });
     };
   } else {
-    product.id = 66;
+    product.id = 666;
     // getNewProductId();
 
     return function (dispatch) {
@@ -78,7 +79,7 @@ export function getProducts(categoryId) {
     if (categoryId) {
       url += "?categoryId=" + categoryId;
     }
-    console.log(url);
+
     return fetch(url)
       .then((response) => {
         let result = response.json();
