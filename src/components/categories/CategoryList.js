@@ -13,7 +13,11 @@ class CategoryList extends Component {
 
   selectCategory(category) {
     this.props.actions.changeCategory(category);
-    this.props.actions.getProducts(category.id);
+    if (category !== "") {
+      this.props.actions.getProducts(category.id);
+    } else {
+      this.props.actions.getProducts();
+    }
   }
 
   render() {
@@ -23,6 +27,13 @@ class CategoryList extends Component {
           <Badge className="badge bg-warning text-dark">Categories</Badge>
         </h3>
         <ListGroup>
+          <ListGroupItem
+            active={this.props.currentCategory === "" || undefined || null}
+            onClick={() => this.selectCategory("")}
+            key={-1}
+          >
+            All Categories
+          </ListGroupItem>
           {this.props.categories.map((category) => (
             <ListGroupItem
               active={category.id === this.props.currentCategory.id}
