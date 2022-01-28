@@ -18,6 +18,7 @@ const config = require('./Api/config');
 
 //TODO
 const multer = require('multer');
+
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, './public/img');
