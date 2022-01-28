@@ -13,8 +13,8 @@ dotenv.config();
 
 const mongoose = require('mongoose');
 
-const api = require('./Api');
-const config = require('./Api/config');
+const api = require('./api');
+const config = require('./api/config');
 
 //TODO
 const multer = require('multer');
